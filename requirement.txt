@@ -1,0 +1,6 @@
+openai
+requests
+ruff
+mypy
+pandas
+python-dotenv
