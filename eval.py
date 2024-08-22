@@ -124,4 +124,4 @@ results_df = results_df[results_df["copilot_answer"] != "To clarify, did you mea
 date_str = datetime.now().strftime("%m_%d_%H%M")
 
 # Save the results to a new CSV file
-results_df.to_csv(f"evaluation_results_{date_str}.csv", index=False)
+results_df.to_csv(f"results/evaluation_results_{date_str}.csv", index=False)

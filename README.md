@@ -1,9 +1,12 @@
-this is a simple repo for valuating the Luis Copilot POC offering for Singtel
+# Copilot Studio Testing
+this is a simple repo for valuating the Copilot Studio chatbots 
 
 ## Set Up
 add this in .env at root
 ```
 OPENAI_API_KEY=<ur openai api key, starts with "sk">
+COPILOT_INIT=<copilot init api endpoint>
+COPILOT_CHAT=<copilot chat api endpoint>
 ```
 
 go to terminal and run:
