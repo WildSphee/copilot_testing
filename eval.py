@@ -72,7 +72,7 @@ for index, row in df.iterrows():
         evaluation = evaluation.strip("'```json\n").rstrip("\n```")
         print(f"trying to load 1st: {evaluation=}")
         eval_data = json.loads(evaluation)
-    except (json.JSONDecodeError, KeyError) as e:
+    except (json.JSONDecodeError, KeyError, Exception) as e:
         print(f"Error processing row {index}: {e}")
         try:
             # Retry once
@@ -84,14 +84,14 @@ for index, row in df.iterrows():
             eval_data = json.loads(evaluation)
         except Exception:
             eval_data = {
-                "faithfulness": {"rating": None, "reason": None},
-                "factualness": {"rating": None, "reason": None},
-                "clarity": {"rating": None, "reason": None},
-                "relevance": {"rating": None, "reason": None},
-                "conciseness": {"rating": None, "reason": None},
-                "overall": {"rating": None, "reason": None},
+                "faithfulness": {"rating": 0, "reason": 0},
+                "factualness": {"rating": 0, "reason": 0},
+                "clarity": {"rating": 0, "reason": 0},
+                "relevance": {"rating": 0, "reason": 0},
+                "conciseness": {"rating": 0, "reason": 0},
+                "overall": {"rating": 0, "reason": 0},
             }
-            response_time = None
+            response_time = 0
 
     results.append(
         {

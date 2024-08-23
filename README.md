@@ -1,5 +1,9 @@
 # Copilot Studio Testing
-this is a simple repo for valuating the Copilot Studio chatbots 
+this is a simple repo for valuating the Copilot Studio chatbots
+metrics in reference to:
+https://medium.com/walmartglobaltech/evaluation-of-rag-metrics-using-raga-0cd9bf001a76
+
+**This evaluation repo is solely for simple / loophole testing purposes, do not treat this as standard**
 
 ## Set Up
 add this in .env at root

@@ -38,10 +38,10 @@ def copilot_chat(url, token, conversation_id, message):
             return response.json(), end_time - start_time
         except requests.exceptions.RequestException as e:
             print(f"Error during chat: {e}")
-            return None, None
+            return 0, 0
     else:
         print("Invalid copilot request")
-        return None, None
+        return 0, 0
 
 
 def get_copilot_response(url, token, watermark=0):
