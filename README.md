@@ -2,6 +2,7 @@
 this is a simple repo for valuating the Copilot Studio chatbots
 metrics in reference to:
 https://medium.com/walmartglobaltech/evaluation-of-rag-metrics-using-raga-0cd9bf001a76
+https://docs.ragas.io/en/latest/concepts/metrics/faithfulness.html
 
 **This evaluation repo is solely for simple / loophole testing purposes, do not treat this as standard**
 
