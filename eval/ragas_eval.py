@@ -11,7 +11,7 @@ from ragas.metrics import (
 )
 
 
-def evaluate_with_ragas(input_csv_path, output_csv_path):
+def evaluate_with_ragas(input_csv_path, output_csv_path, contexts):
     """
     Evaluates answers using the RAGAS library and writes the evaluation results to a CSV file.
 
@@ -23,6 +23,7 @@ def evaluate_with_ragas(input_csv_path, output_csv_path):
         - 'luisgpt_answer': The ground truth answer (used as context and ground truth).
 
     - output_csv_path (str): Path where the evaluation results CSV will be saved.
+    - contexts: (List[List]): all files within the context/ folder
 
     The function reads the input CSV, performs evaluation using RAGAS metrics,
     and writes the results to the output CSV.
@@ -52,7 +53,6 @@ def evaluate_with_ragas(input_csv_path, output_csv_path):
     questions = df["question"].tolist()
     answers = df["copilot_answer"].tolist()
     ground_truths = df["luisgpt_answer"].tolist()
-    contexts = [[gt] for gt in ground_truths]  # contexts is a list of lists
 
     # Create a HuggingFace Dataset
     data_dict = {

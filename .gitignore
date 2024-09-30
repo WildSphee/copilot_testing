@@ -6,3 +6,6 @@ venv
 
 # cache
 __pycache__
+
+# context folder - items maybe confidential
+context/

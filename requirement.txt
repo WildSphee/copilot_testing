@@ -6,3 +6,6 @@ pandas
 python-dotenv
 ragas
 ipykernel
+langchain 
+python-docx 
+PyPDF2
